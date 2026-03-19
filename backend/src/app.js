@@ -17,10 +17,10 @@ app.use(cors({
 }));
 app.use("/api/stream", router);
 app.use(express.json());   
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("*name", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+    res.sendFile(path.join(__dirname, "../public", "index.html"));
 })   
 
 export default app;
